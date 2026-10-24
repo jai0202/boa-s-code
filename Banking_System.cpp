@@ -27,40 +27,40 @@ while (isTrue) {
 	
 	printf("Enter choice: ");
 	if (scanf(" %d", &choice) != 1){
-		printf("Choose between 1 to 4 only!");
+		printf("Choose between 1 to 4 only!\n");
 	} else
 	
 	switch(choice){
 		case 1:
-			printf("Your current balance is %.2f", balance);
+			printf("Your current balance is %.2f\n", balance);
 			while (getchar() != '\n');
 		break;
 		case 2:
 			printf("Withdraw Amount: ");
 			if (scanf("%f", &amount) != 1){
-				printf("Input numerical numbers only!");
+				printf("Input numerical numbers only!\n");
 			} else if (amount <= 0 || amount > balance){
 				printf("Not enough balance. Kindly, check your current balance first.\n");
 			} else {
 				printf("Amount $%.2f has been succesfully withdrawn.\n", amount);
-				printf("Your current balance is $%.2f", balance -= amount);
+				balance -= amount;
 			} while (getchar() != '\n');
 		break;	
 		case 3:
 			printf("How much do you want to deposit?: ");
 			if (scanf("%f", &amount) != 1) {
-				printf("Input numerical numbers only!");
-			} else
+				printf("Input numerical numbers only!\n");
+			} else {
 			printf("Amount $%.2f has been succesfully deposited.\n", amount);
-			printf("Your current balance is $%.2f", balance += amount);
-			while (getchar() != '\n');
+			balance += amount;
+			} while (getchar() != '\n');
 		break;
 		case 4:
-			printf("Exiting program...");
+			printf("\nExiting program...");
 			isTrue = false;
 			break;
 		default:
-			printf("Invalid input");
+			printf("Invalid input. Input numbers only!\n");
 		break;
 	} 
 	if (isTrue){
