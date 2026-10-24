@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdbool.h>
 int main () {
@@ -17,22 +16,24 @@ while (!isPin){
 		while (getchar () != '\n');
 	} else if (pin == 123) {
     isPin = true;
-    printf("Banking System\n1. Check Balance\n2. Withdraw Money\n3. Deposit Money\n4. Exit\n");
-	
-	printf("Enter choice: ");
-	if (scanf(" %d", &choice) != 1){
-		printf("Choose between 1 to 4 only!");
-	} 
+    
 	} else {
     printf("PIN is incorrect. Please try again.\n");
 }
 }
 
 while (isTrue) {
+	printf("Banking System\n1. Check Balance\n2. Withdraw Money\n3. Deposit Money\n4. Exit\n");
+	
+	printf("Enter choice: ");
+	if (scanf(" %d", &choice) != 1){
+		printf("Choose between 1 to 4 only!");
+	} else
 	
 	switch(choice){
 		case 1:
 			printf("Your current balance is %.2f", balance);
+			while (getchar() != '\n');
 		break;
 		case 2:
 			printf("Withdraw Amount: ");
@@ -79,3 +80,4 @@ while (isTrue) {
 
 return 0;
 }
+ 
