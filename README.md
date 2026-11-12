@@ -1,2 +1,1 @@
-# boa-s-code
-random codes
+# boa-s-codes
